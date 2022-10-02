@@ -4,9 +4,8 @@ import { validateEmail } from '../../utils/helpers';
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
+
   const { name, email, message } = formState;
-
-
   const [errorMessage, setErrorMessage] = useState('');
 
   function handleChange(e) {
@@ -32,7 +31,10 @@ function ContactForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(formState);
+    if (!errorMessage) {
+      setFormState({ [e.target.name]: e.target.value });
+      console.log('Form', formState);
+    }
   }
 
   return (
@@ -59,9 +61,7 @@ function ContactForm() {
         <button type="submit">Submit</button>
       </form>
     </section>
-  )
-
-  // JSX
+  );
 }
 
 export default ContactForm;
