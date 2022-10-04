@@ -1,13 +1,13 @@
 {
-  "homepage": "http://jennifer.byrnes.github.io/photo-port",
-  "name": "photo-port",
+  "homepage": "http://jennifer.byrnes.github.io/react-resume-jkb",
+  "name": "react-resume-jkb",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^2.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
