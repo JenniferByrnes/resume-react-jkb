@@ -2,6 +2,7 @@ import React from 'react';
 
 function Resume() {
   return (
+    <section>
     <header className="my-5">
       <h1 id="resume">link to a resume</h1>
       <div>
@@ -32,6 +33,7 @@ function Resume() {
         <li>REST</li>
       </ul>
     </header>
+    </section>
   )
 }
 

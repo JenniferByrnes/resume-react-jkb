@@ -24,6 +24,20 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
   const [contactSelected, setContactSelected] = useState(false);
+  const [resumeSelected, setResumeSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(true);
+
+  console.log("aboutSelected=", aboutSelected );
+  console.log("contactSelected=", contactSelected );
+  console.log("resumeSelected=", resumeSelected );
+  console.log("currentCategory=", currentCategory );
+
+  var mainContent = {};
+  if (aboutSelected){mainContent={About}};
+  if (resumeSelected){mainContent={Resume}};
+  if (contactSelected){mainContent={ContactForm}};
+
+  console.log("mainContent=", mainContent );
 
   return (
     <div>
@@ -33,17 +47,16 @@ function App() {
         currentCategory={currentCategory}
         contactSelected={contactSelected}
         setContactSelected={setContactSelected}
+        resumeSelected={resumeSelected}
+        setResumeSelected={setResumeSelected}
+        aboutSelected={aboutSelected}
+        setAboutSelected={setAboutSelected}
       ></Nav>
       <main>
-        {!contactSelected ? (
-          <>
-            <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
-            <Resume></Resume>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
+        <mainContent></mainContent>
+        <ContactForm></ContactForm>
+        <Resume></Resume>
+        <About></About>
       </main>
     </div>
   );
