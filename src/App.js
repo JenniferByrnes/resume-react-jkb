@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import About from './components/About'
 import Nav from './components/Nav'
 import Gallery from './components/Gallery'
+import Portfolio from './components/Portfolio'
 import ContactForm from './components/Contact'
 import Resume from './components/Resume'
+import Footer from './components/Footer'
 
 import './App.css';
 
@@ -26,6 +28,7 @@ function App() {
   const [contactSelected, setContactSelected] = useState(false);
   const [resumeSelected, setResumeSelected] = useState(false);
   const [aboutSelected, setAboutSelected] = useState(true);
+  const [portfolioSelected, setPortfolioSelected] = useState(false);
 
   console.log("aboutSelected=", aboutSelected );
   console.log("contactSelected=", contactSelected );
@@ -51,13 +54,19 @@ function App() {
         setResumeSelected={setResumeSelected}
         aboutSelected={aboutSelected}
         setAboutSelected={setAboutSelected}
+        portfolioSelected={portfolioSelected}
+        setPortfolioSelected={setPortfolioSelected}
       ></Nav>
       <main>
         <mainContent></mainContent>
         <ContactForm></ContactForm>
         <Resume></Resume>
         <About></About>
+        <Portfolio currentCategory={currentCategory}></Portfolio>
       </main>
+      <footer>
+        <Footer></Footer>
+      </footer>
     </div>
   );
 }

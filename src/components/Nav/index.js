@@ -16,7 +16,9 @@ function Nav(props) {
     resumeSelected,
     setResumeSelected,
     aboutSelected,
-    setAboutSelected
+    setAboutSelected,
+    portfolioSelected,
+    setPortfolioSelected
   } = props;
 
   useEffect(() => {
@@ -32,41 +34,39 @@ function Nav(props) {
       </h2>
       <nav>
         <ul className="flex-row">
-          <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => {setContactSelected(false)
-            setResumeSelected(false)
-            setAboutSelected(true)}}>
-              About me
-            </a>
+          <li className={`mx-2 ${aboutSelected && 'navActive'}`}>
+            <a data-testid="about" href="#about" onClick={() => {
+              setContactSelected(false)
+              setResumeSelected(false)
+              setPortfolioSelected(false)
+              setAboutSelected(true)
+            }}>About me</a>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => {setContactSelected(true)
-            setResumeSelected(false)
-            setAboutSelected(false)}}>Contact</span>
+            <span onClick={() => {
+              setContactSelected(true)
+              setResumeSelected(false)
+              setPortfolioSelected(false)
+              setAboutSelected(false)
+            }}>Contact</span>
           </li>
           <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
-            <a data-testid="about" href="#resume" onClick={() => {setContactSelected(false)
-            setResumeSelected(true)
-            setAboutSelected(false)}}
-            >Resumé</a>
+            <a data-testid="resume" href="#resume" onClick={() => {
+              setContactSelected(false)
+              setResumeSelected(true)
+              setPortfolioSelected(false)
+              setAboutSelected(false)
+            }}>Resumé</a>
           </li>
-          {categories.map((category) => (
-            <li
-              className={`mx-1 ${currentCategory.name === category.name && !contactSelected && !resumeSelected &&`navActive`
-                }`}
-              key={category.name}
-            >
-              <span onClick={() => {
-                setCurrentCategory(category);
-                setContactSelected(false);
-                setResumeSelected(false);
-                setAboutSelected(false);
-              }}
-              >
-                {capitalizeFirstLetter(category.name)}
-              </span>
-            </li>
-          ))}
+          <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
+            <a data-testid="portfolio" href="#portfolio" onClick={() => {
+              setContactSelected(false)
+              setResumeSelected(false)
+              setPortfolioSelected(true)
+              setAboutSelected(false)
+            }}
+            >Portfolio</a>
+          </li>
         </ul>
       </nav>
     </header>

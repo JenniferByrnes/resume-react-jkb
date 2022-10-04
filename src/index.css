@@ -5,12 +5,12 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #00798C;
+  --secondary: #EDAE49;
+  --tertiary: #D1495B;
   --light: #fafafa;
-  --dark: #000000;
-  --darker: #111111;
+  --dark: #30638E;
+  --darker: #003D5B;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -177,6 +177,10 @@ textarea {
   flex-wrap: wrap;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .space-between {
   justify-content: space-between;
 }
@@ -292,4 +296,8 @@ a {
 
 .navActive {
   color: var(--secondary);
+}
+
+.background-footer {
+  background-color: #003D5B;
 }

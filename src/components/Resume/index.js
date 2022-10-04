@@ -6,7 +6,7 @@ function Resume() {
     <header className="my-5">
       <h1 id="resume">link to a resume</h1>
       <div>
-        <a href="https://docs.google.com/document/d/1xlJVHfr4bVYev0StOZ8vOCXq7LtwUyQ-2tv2KReKpdY/edit?usp=sharing" target="_blank">View resumé online with this link</a>
+        <a href="https://docs.google.com/document/d/1xlJVHfr4bVYev0StOZ8vOCXq7LtwUyQ-2tv2KReKpdY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View resumé online with this link</a>
       </div>
       <div>
         <a href="../../../assets/resume/JenniferByrnesResume.pdf" download>Download with this link
