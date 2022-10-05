@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import About from './components/About'
 import Nav from './components/Nav'
-import Gallery from './components/Gallery'
+// import Gallery from './components/Gallery'
 import Portfolio from './components/Portfolio'
 import ContactForm from './components/Contact'
 import Resume from './components/Resume'
@@ -30,17 +30,17 @@ function App() {
   const [aboutSelected, setAboutSelected] = useState(true);
   const [portfolioSelected, setPortfolioSelected] = useState(false);
 
-  console.log("aboutSelected=", aboutSelected );
-  console.log("contactSelected=", contactSelected );
-  console.log("resumeSelected=", resumeSelected );
-  console.log("currentCategory=", currentCategory );
+  console.log("aboutSelected=", aboutSelected);
+  console.log("contactSelected=", contactSelected);
+  console.log("resumeSelected=", resumeSelected);
+  console.log("currentCategory=", currentCategory);
 
   var mainContent = {};
-  if (aboutSelected){mainContent={About}};
-  if (resumeSelected){mainContent={Resume}};
-  if (contactSelected){mainContent={ContactForm}};
+  if (aboutSelected) { mainContent = { About } };
+  if (resumeSelected) { mainContent = { Resume } };
+  if (contactSelected) { mainContent = { ContactForm } };
 
-  console.log("mainContent=", mainContent );
+  console.log("mainContent=", mainContent);
 
   return (
     <div>
@@ -58,11 +58,10 @@ function App() {
         setPortfolioSelected={setPortfolioSelected}
       ></Nav>
       <main>
-        <mainContent></mainContent>
+        <Portfolio currentCategory={currentCategory}></Portfolio>
         <ContactForm></ContactForm>
         <Resume></Resume>
         <About></About>
-        <Portfolio currentCategory={currentCategory}></Portfolio>
       </main>
       <footer>
         <Footer></Footer>

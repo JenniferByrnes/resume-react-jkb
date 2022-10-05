@@ -29,7 +29,7 @@ function Nav(props) {
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Byrnes
+          <span role="img" aria-label="camera"> 📸</span> Jennifer Byrnes
         </a>
       </h2>
       <nav>
@@ -40,7 +40,8 @@ function Nav(props) {
               setResumeSelected(false)
               setPortfolioSelected(false)
               setAboutSelected(true)
-            }}>About me</a>
+            }}
+            >About me</a>
           </li>
           <li className={`mx-2 ${contactSelected && 'navActive'}`}>
             <span onClick={() => {
@@ -48,7 +49,8 @@ function Nav(props) {
               setResumeSelected(false)
               setPortfolioSelected(false)
               setAboutSelected(false)
-            }}>Contact</span>
+            }}
+            >Contact</span>
           </li>
           <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
             <a data-testid="resume" href="#resume" onClick={() => {
@@ -56,7 +58,8 @@ function Nav(props) {
               setResumeSelected(true)
               setPortfolioSelected(false)
               setAboutSelected(false)
-            }}>Resumé</a>
+            }}
+            >Resumé</a>
           </li>
           <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
             <a data-testid="portfolio" href="#portfolio" onClick={() => {

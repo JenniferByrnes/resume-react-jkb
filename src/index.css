@@ -177,6 +177,16 @@ textarea {
   flex-wrap: wrap;
 }
 
+#about-me {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#about-text {
+  flex-basis: 65%;
+}
+
 .justify-center {
   justify-content: center;
 }
