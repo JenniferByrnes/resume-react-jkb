@@ -1,29 +1,6 @@
-import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from "../../utils/helpers";
+import React from 'react';
 
-// function categorySelected(name) {
-//   console.log(`${name} clicked`)
-// }
-
-
-function Nav(props) {
-  const {
-    categories = [],
-    setCurrentCategory,
-    currentCategory,
-    contactSelected,
-    setContactSelected,
-    resumeSelected,
-    setResumeSelected,
-    aboutSelected,
-    setAboutSelected,
-    portfolioSelected,
-    setPortfolioSelected
-  } = props;
-
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
+function Nav({ currentPage, handlePageChange }) {
 
   return (
     <header className="flex-row px-1">
@@ -33,42 +10,44 @@ function Nav(props) {
         </a>
       </h2>
       <nav>
-        <ul className="flex-row">
-          <li className={`mx-2 ${aboutSelected && 'navActive'}`}>
-            <a data-testid="about" href="#about" onClick={() => {
-              setContactSelected(false)
-              setResumeSelected(false)
-              setPortfolioSelected(false)
-              setAboutSelected(true)
-            }}
-            >About me</a>
+        <ul className="nav nav-tabs flex-row">
+          <li className="nav-item mx-2">
+            <a
+              href="#about"
+              onClick={() => handlePageChange('About')}
+              // Ternary operator - if - ?then - :else
+              // if the currentPage is About, then nav-link is active, else nav-link is not changed to active
+              className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+            >
+              About
+            </a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => {
-              setContactSelected(true)
-              setResumeSelected(false)
-              setPortfolioSelected(false)
-              setAboutSelected(false)
-            }}
-            >Contact</span>
+          <li className="nav-item mx-2">
+            <a
+              href="#resume"
+              onClick={() => handlePageChange('Resume')}
+              className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
+            >
+              Resumé
+            </a>
           </li>
-          <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
-            <a data-testid="resume" href="#resume" onClick={() => {
-              setContactSelected(false)
-              setResumeSelected(true)
-              setPortfolioSelected(false)
-              setAboutSelected(false)
-            }}
-            >Resumé</a>
+          <li className="nav-item mx-2">
+            <a
+              href="#portfolio"
+              onClick={() => handlePageChange('Portfolio')}
+              className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+            >
+              Portfolio
+            </a>
           </li>
-          <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
-            <a data-testid="portfolio" href="#portfolio" onClick={() => {
-              setContactSelected(false)
-              setResumeSelected(false)
-              setPortfolioSelected(true)
-              setAboutSelected(false)
-            }}
-            >Portfolio</a>
+          <li className="nav-item mx-2">
+            <a
+              href="#contact"
+              onClick={() => handlePageChange('Contact')}
+              className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>

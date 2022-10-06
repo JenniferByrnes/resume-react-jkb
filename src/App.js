@@ -9,65 +9,34 @@ import Footer from './components/Footer'
 
 import './App.css';
 
-function App() {
-  const [categories] = useState([
-    {
-      name: "commercial",
-      description:
-        "Photos of grocery stores, food trucks, and other commercial projects",
-    },
-    { name: "portraits", description: "Portraits of people in my life" },
-    { name: "food", description: "Delicious delicacies" },
-    {
-      name: "landscape",
-      description: "Fields, farmhouses, waterfalls, and the beauty of nature",
-    },
-  ]);
+export default function App() {
+  const [currentPage, setCurrentPage] = useState('About');
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const [contactSelected, setContactSelected] = useState(false);
-  const [resumeSelected, setResumeSelected] = useState(false);
-  const [aboutSelected, setAboutSelected] = useState(true);
-  const [portfolioSelected, setPortfolioSelected] = useState(false);
+  // if the current page as brought in by the useState of "About" - return the About component, otherwise, bring in the other named components.
+  const renderPage = () => {
+    if (currentPage === 'About') {
+      return <About />;
+    }
+    if (currentPage === 'Portfolio') {
+      return <Portfolio />;
+    }
+    if (currentPage === 'Resume') {
+      return <Resume />;
+    }
+    return <ContactForm />;
+  };
 
-  console.log("aboutSelected=", aboutSelected);
-  console.log("contactSelected=", contactSelected);
-  console.log("resumeSelected=", resumeSelected);
-  console.log("currentCategory=", currentCategory);
-
-  var mainContent = {};
-  if (aboutSelected) { mainContent = { About } };
-  if (resumeSelected) { mainContent = { Resume } };
-  if (contactSelected) { mainContent = { ContactForm } };
-
-  console.log("mainContent=", mainContent);
+  const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-        resumeSelected={resumeSelected}
-        setResumeSelected={setResumeSelected}
-        aboutSelected={aboutSelected}
-        setAboutSelected={setAboutSelected}
-        portfolioSelected={portfolioSelected}
-        setPortfolioSelected={setPortfolioSelected}
-      ></Nav>
-      <main>
-        <Portfolio currentCategory={currentCategory}></Portfolio>
-        <ContactForm></ContactForm>
-        <Resume></Resume>
-        <About></About>
-      </main>
+      {/* This passes in the currentPage and handlePageChange values to NavTabs as props. */}
+      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* This calls the renderPage function which will determine which page to show (About, Portfolio, Resume, Contact). */}
+       {renderPage()}
       <footer>
         <Footer></Footer>
       </footer>
     </div>
   );
 }
-
-export default App;

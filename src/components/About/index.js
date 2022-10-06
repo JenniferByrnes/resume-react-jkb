@@ -3,7 +3,7 @@ import byrnesImage from "../../assets/cover/JByrnesPhoto1.jpeg";
 
 function About() {
   return (
-    <header className="my-5">
+    <section className="my-5">
       <h1 id="about">About me</h1>
       <div id="about-me">
         <img src={byrnesImage} className="my-2" style={{ width: "350px", height: "350px" }} alt="cover"/>    
@@ -17,7 +17,7 @@ function About() {
             React.js, and responsive web design to build applications from scaffolding to rollout.</span>
         </div>
       </div>
-    </header>
+    </section>
   )
 }
 

@@ -2,8 +2,7 @@ import React from 'react';
 
 function Resume() {
   return (
-    <section>
-    <header className="my-5">
+    <section className="my-5">
       <h1 id="resume">My Resumé</h1>
       <div>
         <a href="https://docs.google.com/document/d/1xlJVHfr4bVYev0StOZ8vOCXq7LtwUyQ-2tv2KReKpdY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View resumé online with this link</a>
@@ -32,7 +31,6 @@ function Resume() {
         <li>MongoDB, Mongoose</li>
         <li>REST</li>
       </ul>
-    </header>
     </section>
   )
 }
