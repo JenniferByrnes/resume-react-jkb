@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 
-function Modal({ onClose, currentPhoto }) {
-  const {name, description, index} = currentPhoto;
+function ModalProject({ onClose, currentPhoto }) {
+  const { name, description, index } = currentPhoto;
 
   return (
     <div className="modalBackdrop">
       <div className="modalContainer">
-        <h3 className="modalTitle">{name}</h3>
-        <img src={require(`../../assets/projects/${index}.png`)} alt="selected project" />
-        <p>{description}</p>
-          <button onClick={onClose} type="button">Close this modal</button>
-        </div>
+        <ModalHeader>{name}</ModalHeader>
+        <ModalBody>
+          <img src={require(`../../assets/projects/${index}.png`)} alt="selected project" />
+          <p>{description}</p>
+          <button onClick={onClose} type="button">Close</button>
+        </ModalBody>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-export default Modal;
+export default ModalProject;

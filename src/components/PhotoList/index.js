@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Modal from '../Modal';
+import ModalProject from '../Modal';
+import { Modal, ModalBody, ModalHeader, Container, Card, CardGroup, CardBody, CardFooter } from 'reactstrap';
 
 const PhotoList = () => {
 
@@ -43,19 +44,26 @@ const PhotoList = () => {
   return (
     <div>
       {isModalOpen && (
-        <Modal currentPhoto={currentPhoto} onClose={toggleModal} />
+        <ModalProject currentPhoto={currentPhoto} onClose={toggleModal} />
       )}
-      <div className="flex-row">
+      <CardGroup className="flex-row">
         {currentPhotos.map((image, i) => (
-          <img
-            src={require(`../../assets/projects/${i}.png`)}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
-          />
+          <Card className='card-stuff'>
+            <h5 className="card-title">{image.name}</h5>
+            <img
+              src={require(`../../assets/projects/${i}.png`)}
+              alt={image.name}
+              className="img-thumbnail mx-1"
+              onClick={() => toggleModal(image, i)}
+              key={image.name}
+            />
+            <CardFooter>
+              <a href="#" class="btn btn-primary">Deployed App</a>
+              <a href="#" class="btn btn-primary">GitHub</a>
+            </CardFooter>
+          </Card>
         ))}
-      </div>
+      </CardGroup>
     </div>
   )
 }

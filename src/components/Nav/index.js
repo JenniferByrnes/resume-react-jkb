@@ -1,37 +1,36 @@
 import React from 'react';
+import { Nav, NavItem } from 'reactstrap';
 
-function Nav({ currentPage, handlePageChange }) {
+function NavBar({ currentPage, handlePageChange }) {
 
   return (
-    <header className="flex-row px-1">
+    <header className="flex-row px-0 space-between">
       <h2>
-        <a data-testid="link" href="/">
+        <a data-testid="link" className="text-decoration-none" href="/">
           <span role="img" aria-label="camera"> 📸</span> Jennifer Byrnes
         </a>
       </h2>
-      <nav>
-        <ul className="nav nav-tabs flex-row">
-          <li className="nav-item mx-2">
+      <Nav className="nav-tabs border-bottom-0 my-1 flex-row">
+          <NavItem className="mx-2">
             <a
               href="#about"
               onClick={() => handlePageChange('About')}
               // Ternary operator - if - ?then - :else
-              // if the currentPage is About, then nav-link is active, else nav-link is not changed to active
               className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
             >
               About
             </a>
-          </li>
-          <li className="nav-item mx-2">
+          </NavItem>
+          <NavItem className="mx-2">
             <a
               href="#resume"
               onClick={() => handlePageChange('Resume')}
-              className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
+              className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
             >
               Resumé
             </a>
-          </li>
-          <li className="nav-item mx-2">
+          </NavItem>
+          <NavItem className="mx-2">
             <a
               href="#portfolio"
               onClick={() => handlePageChange('Portfolio')}
@@ -39,8 +38,8 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Portfolio
             </a>
-          </li>
-          <li className="nav-item mx-2">
+          </NavItem>
+          <NavItem className="mx-2">
             <a
               href="#contact"
               onClick={() => handlePageChange('Contact')}
@@ -48,11 +47,10 @@ function Nav({ currentPage, handlePageChange }) {
             >
               Contact
             </a>
-          </li>
-        </ul>
-      </nav>
+          </NavItem>
+      </Nav>
     </header>
   );
 }
 
-export default Nav;
+export default NavBar;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import About from './components/About'
-import Nav from './components/Nav'
+import NavBar from './components/Nav'
 // import Gallery from './components/Gallery'
 import Portfolio from './components/Portfolio'
 import ContactForm from './components/Contact'
@@ -8,6 +8,7 @@ import Resume from './components/Resume'
 import Footer from './components/Footer'
 
 import './App.css';
+import { Modal, ModalBody, ModalHeader, Container, Card } from 'reactstrap';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -31,9 +32,9 @@ export default function App() {
   return (
     <div>
       {/* This passes in the currentPage and handlePageChange values to NavTabs as props. */}
-      <Nav currentPage={currentPage} handlePageChange={handlePageChange} />
+      <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* This calls the renderPage function which will determine which page to show (About, Portfolio, Resume, Contact). */}
-       {renderPage()}
+        {renderPage()}
       <footer>
         <Footer></Footer>
       </footer>
