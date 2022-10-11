@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import ModalProject from '../Modal';
-import { Modal, ModalBody, ModalHeader, Container, Card, CardGroup, CardBody, CardFooter } from 'reactstrap';
+import { Modal, ModalBody, ModalHeader, CardLink, Card, Row, Col, CardBody, CardFooter, CardImg, CardTitle, CardHeader } from 'reactstrap';
 
-const PhotoList = () => {
+const PhotoListAlt = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -46,26 +46,38 @@ const PhotoList = () => {
       {isModalOpen && (
         <ModalProject currentPhoto={currentPhoto} onClose={toggleModal} />
       )}
-      <CardGroup className="flex-row">
+      <Row className="flex-row">
+        
         {currentPhotos.map((image, i) => (
-          <Card className='card-stuff'>
-            <h5 className="card-title">{image.name}</h5>
-            <img
-              src={require(`../../assets/projects/${i}.png`)}
-              alt={image.name}
-              className="img-thumbnail mx-1"
-              onClick={() => toggleModal(image, i)}
-              key={image.name}
-            />
+          <Col sm="6">
+          <Card className='card-stuff' style={{
+            width: '500px'
+          }}>
+            <CardHeader>
+              <CardTitle tag="h5">{image.name}</CardTitle>
+            </CardHeader>
+
+              <CardImg
+                src={require(`../../assets/projects/${i}.png`)}
+                alt={image.name}
+                onClick={() => toggleModal(image, i)}
+                key={image.name}
+              />
+
             <CardFooter>
-              <a href="#" class="btn btn-primary">Deployed App</a>
-              <a href="#" class="btn btn-primary">GitHub</a>
+              <CardLink href="#">
+                Deployed App
+              </CardLink>
+              <CardLink href="#">
+                GitHub
+              </CardLink>
             </CardFooter>
           </Card>
+          </Col>
         ))}
-      </CardGroup>
+      </Row>
     </div>
   )
 }
 
-export default PhotoList;
+export default PhotoListAlt;

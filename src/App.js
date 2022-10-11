@@ -3,6 +3,7 @@ import About from './components/About'
 import NavBar from './components/Nav'
 // import Gallery from './components/Gallery'
 import Portfolio from './components/Portfolio'
+import PortfolioAlt from './components/PortfolioAlt'
 import ContactForm from './components/Contact'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
@@ -20,6 +21,9 @@ export default function App() {
     }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
+    }
+    if (currentPage === 'PortfolioAlt') {
+      return <PortfolioAlt />;
     }
     if (currentPage === 'Resume') {
       return <Resume />;

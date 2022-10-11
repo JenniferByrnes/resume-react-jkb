@@ -175,7 +175,7 @@ textarea {
 }
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -243,42 +243,11 @@ textarea {
   padding-bottom: var(--spacing-two);
 }
 
-.card {
-  width: 25%;
-  text-align: center;
-}
-
 .img-thumbnail {
   width: auto;
   height: 300px;
   margin-bottom: 50px;
   cursor: pointer;
-}
-
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
-}
-
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
-}
-
-.modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
 }
 
 a {
@@ -295,20 +264,20 @@ a {
 }
 
 .card-stuff {
-  position: relative;
-  width: 300%;
-  max-width: 500px;
+  position: relative; 
   height: 300px;
   margin: 30px;
+  width: 300px;
+  color: #003D5B;
 }
 
 footer {
   background-color: #003D5B;
   padding: 12px;
+  display: flex;
   text-align: center;
-  position: absolute;
-  right: 0;
-  left: 0;
+  position: fixed;
+  width: 100%;
   bottom: 0;
   color: antiquewhite;
 }

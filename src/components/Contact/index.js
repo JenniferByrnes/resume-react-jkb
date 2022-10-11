@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
 import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
 
+const SERVICE_ID = "service_ahz5iig";
+const TEMPLATE_ID = "template_zb9eoya";
+const USER_ID = "6OX_BEPjn0TS8Fxqn";
 
 function ContactForm() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -34,7 +39,22 @@ function ContactForm() {
     e.preventDefault();
     if (!errorMessage) {
       setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
+
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        .then((result) => {
+          Swal.fire({
+            icon: 'success',
+            title: 'Message Sent Successfully'
+          })
+        }, (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops, something went wrong',
+            text: error.text,
+          })
+        });
+      e.target.reset()
     }
   }
 
@@ -44,21 +64,23 @@ function ContactForm() {
       <Form id="contact-form" onSubmit={handleSubmit}>
 
         <FormGroup>
-          <Label htmlFor="name">Name: </Label>
-          <Input type="text" defaultValue={name} onBlur={handleChange} name="name" />
+          <Label htmlFor='user_name'>Name: </Label>
+          <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
+          />
         </FormGroup>
         <FormGroup>
-          <Label htmlFor="email">Email address: </Label>
-          <Input type="email" defaultValue={email} onBlur={handleChange} name="email" />
+          <Label htmlFor='user_email'>Email address: </Label>
+          <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
+          />
         </FormGroup>
         <FormGroup>
-          <Label htmlFor="message">Message:</Label>
+          <Label htmlFor='user_message'>Message:</Label>
           <Input
             id="messageText"
             type="textarea"
-            name="message" 
-            defaultValue={message} 
-            onBlur={handleChange} 
+            name='user_message'
+            defaultValue={message}
+            onBlur={handleChange}
             rows="5"
           />
         </FormGroup>
