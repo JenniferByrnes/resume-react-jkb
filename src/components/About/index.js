@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 function About() {
   return (
-    <Container>
+    <Container id="container-about">
       <h1>About me</h1>
       <Row className="flex-wrap justify-center">
         <Col xs="auto">
@@ -12,7 +12,7 @@ function About() {
         </Col>
         <Col md="6">
           <div className="my-2 text-center">
-            <div className="text-warning">
+            <div id="about-me-titles">
               <h2>Motivated Experienced</h2>
               <h2>Bootcamp Graduate</h2>
               <h2>Navy Veteran</h2>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 import byrnesResume from "../../assets/cover/Byrnesresume.pdf";
 
-function ResumeSolo() {
+function ResumePDF() {
 
   return (
     <div className="modalBackdrop">
@@ -20,4 +20,4 @@ function ResumeSolo() {
   );
 }
 
-export default ResumeSolo;
+export default ResumePDF;

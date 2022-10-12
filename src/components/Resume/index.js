@@ -16,7 +16,7 @@ function Resume() {
       </div>
       <div>
 
-        <a href="#resumeSolo" onClick={toggle}
+        <a href="#resumePDF" onClick={toggle}
         >Download PDF resumé with this link</a>
 
         <Modal isOpen={modal} toggle={toggle} fullscreen>

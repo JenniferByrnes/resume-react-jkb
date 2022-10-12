@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { CardGroup, Container } from 'reactstrap';
-import { CardLink, Card, Row, Col, CardBody, CardFooter, CardImg, CardTitle, CardHeader } from 'reactstrap';
+import { Row, Col, CardBody, CardImg } from 'reactstrap';
 import Project from '../Project';
-import Modal from '../Modal';
 
 const photos = [0, 1, 2, 3, 4, 5];
 

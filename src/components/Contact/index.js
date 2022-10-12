@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
-import { Container, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Card, Form, FormGroup, Input, Button } from 'reactstrap';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
@@ -61,43 +61,42 @@ function ContactForm() {
   return (
     <Container>
       <h1 className="my-2">Contact me</h1>
-      <p>Jennifer Byrnes</p>
-      <p>(804) 909-0707</p>
-      <p>jennifer.byrnes@outlook.com</p>
-      <Form id="contact-form" onSubmit={handleSubmit}>
+      <Card style={{ width: '18rem' }} className="justify-center p-2">
+        <Form id="contact-form" onSubmit={handleSubmit}>
 
-        <FormGroup>
-          <Label htmlFor='user_name'>Name: </Label>
-          <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
-          icon="user circle"
-          iconPosition="left"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor='user_email'>Email address: </Label>
-          <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
-          icon="mail"
-          iconPosition="left"
-          />
-        </FormGroup>
-        <FormGroup>
-          <Label htmlFor='user_message'>Message:</Label>
-          <Input
-            id="messageText"
-            type="textarea"
-            name='user_message'
-            defaultValue={message}
-            onBlur={handleChange}
-            rows="5"
-          />
-        </FormGroup>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <Button type="submit">Submit</Button>
-      </Form>
+          <FormGroup>
+            <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
+              icon="user circle"
+              iconPosition="left"
+              placeholder="Name"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
+              icon="mail"
+              iconPosition="left"
+              placeholder="Email"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              id="messageText"
+              type="textarea"
+              name='user_message'
+              defaultValue={message}
+              onBlur={handleChange}
+              rows="5"
+              placeholder="Message"
+            />
+          </FormGroup>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <Button type="submit">Submit</Button>
+        </Form>
+      </Card>
     </Container>
   );
 }
