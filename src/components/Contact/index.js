@@ -61,16 +61,23 @@ function ContactForm() {
   return (
     <Container>
       <h1 className="my-2">Contact me</h1>
+      <p>Jennifer Byrnes</p>
+      <p>(804) 909-0707</p>
+      <p>jennifer.byrnes@outlook.com</p>
       <Form id="contact-form" onSubmit={handleSubmit}>
 
         <FormGroup>
           <Label htmlFor='user_name'>Name: </Label>
           <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
+          icon="user circle"
+          iconPosition="left"
           />
         </FormGroup>
         <FormGroup>
           <Label htmlFor='user_email'>Email address: </Label>
           <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
+          icon="mail"
+          iconPosition="left"
           />
         </FormGroup>
         <FormGroup>

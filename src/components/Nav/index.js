@@ -41,15 +41,6 @@ function NavBar({ currentPage, handlePageChange }) {
           </NavItem>
           <NavItem className="mx-2">
             <a
-              href="#portfolioalt"
-              onClick={() => handlePageChange('PortfolioAlt')}
-              className={currentPage === 'PortfolioAlt' ? 'nav-link active' : 'nav-link'}
-            >
-              PortfolioAlt
-            </a>
-          </NavItem>
-          <NavItem className="mx-2">
-            <a
               href="#contact"
               onClick={() => handlePageChange('Contact')}
               className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}

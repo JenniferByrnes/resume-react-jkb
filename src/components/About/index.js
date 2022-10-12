@@ -11,7 +11,7 @@ function About() {
           <img src={byrnesImage} className="img-fluid my-2" style={{ minWidth: "350px", height: "350px" }} alt="Jennifer Byrnes" />
         </Col>
         <Col md="6">
-          <div className="my-2">
+          <div className="my-2 text-center">
             <div className="text-warning">
               <h2>Motivated Experienced</h2>
               <h2>Bootcamp Graduate</h2>

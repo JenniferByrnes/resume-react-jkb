@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import About from './components/About'
 import NavBar from './components/Nav'
-// import Gallery from './components/Gallery'
 import Portfolio from './components/Portfolio'
-import PortfolioAlt from './components/PortfolioAlt'
 import ContactForm from './components/Contact'
 import Resume from './components/Resume'
 import Footer from './components/Footer'
 
 import './App.css';
-import { Modal, ModalBody, ModalHeader, Container, Card } from 'reactstrap';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -22,9 +19,6 @@ export default function App() {
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
     }
-    if (currentPage === 'PortfolioAlt') {
-      return <PortfolioAlt />;
-    }
     if (currentPage === 'Resume') {
       return <Resume />;
     }
@@ -34,12 +28,12 @@ export default function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div>
+    <div id="main-div">
       {/* This passes in the currentPage and handlePageChange values to NavTabs as props. */}
       <NavBar currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* This calls the renderPage function which will determine which page to show (About, Portfolio, Resume, Contact). */}
         {renderPage()}
-      <footer>
+      <footer className='justify-center'>
         <Footer></Footer>
       </footer>
     </div>

@@ -11,6 +11,12 @@ body {
   box-sizing: inherit;
 }
 
+#main-div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
 	margin: 0 auto;
 	max-width: 90%;
@@ -276,8 +282,8 @@ footer {
   padding: 12px;
   display: flex;
   text-align: center;
-  position: fixed;
   width: 100%;
   bottom: 0;
   color: antiquewhite;
+  margin-top: auto;
 }
