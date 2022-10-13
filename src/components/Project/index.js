@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { CardLink, Card, Row, Col, CardBody, CardFooter, CardImg, CardTitle, CardHeader } from 'reactstrap';
+import { CardLink, CardText } from 'reactstrap';
 
-const Project = (projectKey) => {
+const Project = ({ projectKey }) => {
 
   const [photos] = useState([
     {
@@ -48,23 +48,18 @@ const Project = (projectKey) => {
     },
   ]);
 
-  const currentPhotos = photos;
-
-  const [currentPhoto, setCurrentPhoto] = useState();
-
   return (
     <div>
-      <CardHeader>
-        <CardTitle tag="h5">{photos[projectKey].name}</CardTitle>
-      </CardHeader>
-      <CardFooter>
-        <CardLink href="{photos[projectKey].deployedLink}">
-          Deployed App
-        </CardLink>
-        <CardLink href="{photos[projectKey].githubLink}">
-          GitHub
-        </CardLink>
-      </CardFooter>
+        <CardText tag="h3" style={{ color: "var(--primary)" }} >{photos[projectKey].name}</CardText>
+
+        <CardText>
+          <CardLink href={photos[projectKey].deployedLink}>
+            Deployed App
+          </CardLink>
+          <CardLink href={photos[projectKey].githubLink}>
+            GitHub
+          </CardLink>
+        </CardText>
     </div>
   )
 }

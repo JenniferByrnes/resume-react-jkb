@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from 'reactstrap';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Card, CardHeader, CardBody } from 'reactstrap';
 import byrnesResume from "../../assets/cover/Byrnesresume.pdf";
 
 function Resume() {
@@ -32,28 +32,34 @@ function Resume() {
           </ModalFooter>
         </Modal>
       </div>
-      <h2>Front-end Proficiencies</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>JQuery</li>
-        <li>responsive design</li>
-        <li>React</li>
-        <li>Bootstrap</li>
-        <li>PowerBuilder, PeopleSoft</li>
-      </ul>
-      <h2>Back-end Proficiencies</h2>
-      <ul>
-        <li>HTML</li>
-        <li>APIs</li>
-        <li>Node</li>
-        <li>Express</li>
-        <li>SQL, MySQL, Sequelize</li>
-        <li>MongoDB, Mongoose</li>
-        <li>REST</li>
-        <li>C, Unix, PL1, COBOL, Ingres</li>
-      </ul>
+      <div className="flex-wrap justify-center">
+        <div>
+          <div>Front-end Proficiencies</div>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>JQuery</li>
+            <li>responsive design</li>
+            <li>React</li>
+            <li>Bootstrap</li>
+            <li>PowerBuilder, PeopleSoft</li>
+          </ul>
+        </div>
+        <div>
+          <div>Back-end Proficiencies</div>
+          <ul>
+            <li>HTML</li>
+            <li>APIs</li>
+            <li>Node</li>
+            <li>Express</li>
+            <li>SQL, MySQL, Sequelize</li>
+            <li>MongoDB, Mongoose</li>
+            <li>REST</li>
+            <li>C, Unix, PL1, COBOL, Ingres</li>
+          </ul>
+        </div>
+      </div>
     </Container >
   )
 }

@@ -6,8 +6,8 @@ function NavBar({ currentPage, handlePageChange }) {
   return (
     <header className="flex-row px-0 space-between">
       <h2>
-        <a data-testid="link" className="text-decoration-none" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Jennifer Byrnes
+        <a id="name-logo" >  
+           Jennifer Byrnes
         </a>
       </h2>
       <Nav className="nav-tabs border-bottom-0 my-1 flex-row">
