@@ -1,11 +1,12 @@
 
 # Resume-react-jkb
 
+Deployed here: https://jenniferbyrnes.github.io/resume-react-jkb/
 
 ## Description:
 
 An online portfolio of projects created by me.
-[React Resume Screenshot](assets/cover/ScreenShot.png).
+[React Resume Screenshot](src/assets/cover/ScreenShot.png).
 
 ## Table of Contents
 
