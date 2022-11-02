@@ -1,11 +1,9 @@
 import React from 'react'
-import { CardGroup, Container } from 'reactstrap';
+import { Container } from 'reactstrap';
 import { Row, Col, Card, CardImg, CardHeader } from 'reactstrap';
 import Project from '../Project';
 
 const photos = [0, 1, 2, 3, 4, 5];
-
-
 
 function Portfolio() {
   return (
@@ -14,7 +12,7 @@ function Portfolio() {
       <Row className="flex-row">
         {photos.map((image, i) => (   
           <Col xs="12" md="6" xl="4" >
-            <Card style={{ minWidth: "350px", height: "540px" }} >
+            <Card className="m-2" style={{ minWidth: "350px", height: "540px" }} >
               <CardHeader>
             <Project projectKey={i} />
             </CardHeader>
@@ -22,8 +20,9 @@ function Portfolio() {
                 src={require(`../../assets/projects/${i}.png`)}
                 alt={image.name}
                 key={image.name}
-                style={{ minWidth: "350px", height: "500px" }}
+                style={{ minWidth: "350px", height: "440px" }}
                 width="100%"
+                height="100%"
               />
             </Card>    
           </Col>
