@@ -12,7 +12,7 @@ function About() {
         </Col>
         <Col md="6">
           <div className="my-2 text-center">
-            <div id="about-me-titles">
+            <div>
               <h2>Motivated Experienced</h2>
               <h2>Bootcamp Graduate</h2>
               <h2>Navy Veteran</h2>
