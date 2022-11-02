@@ -32,9 +32,12 @@ function Resume() {
           </ModalFooter>
         </Modal>
       </div>
-      <div className="flex-wrap justify-center">
-        <div>
-          <div>Front-end Proficiencies</div>
+      <div className="my-2 text-center">
+        <h1 className='mt-4'>Skill Set</h1>
+      </div>
+      <div className="row">
+        <div className="col-md">
+          <h2>Front-end Proficiencies</h2>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -46,8 +49,8 @@ function Resume() {
             <li>PowerBuilder, PeopleSoft</li>
           </ul>
         </div>
-        <div>
-          <div>Back-end Proficiencies</div>
+        <div className="col-md">
+          <h2>Back-end Proficiencies</h2>
           <ul>
             <li>HTML</li>
             <li>APIs</li>

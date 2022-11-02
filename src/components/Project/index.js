@@ -6,10 +6,10 @@ const Project = ({ projectKey }) => {
   const [photos] = useState([
     {
       key: 0,
-      name: 'Password Generator',
-      description: 'A password generator allows the user to choose the type of characters in their password.',
-      deployedLink: 'https://jenniferbyrnes.github.io/password-gen/',
-      githubLink: 'https://github.com/JenniferByrnes/password-gen'
+      name: 'Project Choice',
+      description: 'This programs allows a user to find the abortion laws for a given US state and provides an online retail store from which to purchase branded merchandise.  I led a five person team to build this class project.',
+      deployedLink: 'https://project-choice.herokuapp.com/',
+      githubLink: 'https://github.com/JenniferByrnes/project-choice'
     },
     {
       key: 1,
