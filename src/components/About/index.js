@@ -18,6 +18,7 @@ function About() {
               <h2>Navy Veteran</h2>
             </div>
             <div>
+              <p></p>
               <h4>Full Stack Web Developer with a focus on front-end development and experience in application development,
                 teaching, and military leadership. Expected certificate from the University of Richmond's Full Stack Web
                 Development Bootcamp in November 2022. 

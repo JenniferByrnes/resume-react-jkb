@@ -159,6 +159,16 @@ nav li {
   border-color: var(--secondary);
 }
 
+.navbar-toggler-icon {
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+.nav-link:hover {
+  color: var(--secondary);
+  background-color: none;
+}
+
 textarea {
 	width: 600px;
 	height: 120px;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
-import { Container, Card, Form, FormGroup, Input, Button } from 'reactstrap';
+import { Container, Card, Form, FormGroup, Input, Button, Row } from 'reactstrap';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
 
@@ -61,6 +61,7 @@ function ContactForm() {
   return (
     <Container>
       <h1 className="my-2">Contact me</h1>
+      <Row className="flex-wrap justify-center">
       <Card style={{ width: '18rem' }} className="justify-center p-2">
         <Form id="contact-form" onSubmit={handleSubmit}>
 
@@ -97,6 +98,7 @@ function ContactForm() {
           <Button type="submit">Submit</Button>
         </Form>
       </Card>
+      </Row>
     </Container>
   );
 }
