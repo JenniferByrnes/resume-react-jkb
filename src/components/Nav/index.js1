@@ -53,4 +53,4 @@ function NavBar({ currentPage, handlePageChange }) {
   );
 }
 
-export default NavBar;
+// export default NavBar;

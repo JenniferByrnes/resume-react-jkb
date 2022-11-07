@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import About from './components/About'
-import NavBar from './components/Nav'
+import NavBar from './components/NavBar'
 import Portfolio from './components/Portfolio'
 import ContactForm from './components/Contact'
 import Resume from './components/Resume'
