@@ -1,7 +1,7 @@
 
 # Resume-react-jkb
 
-Deployed here: https://jenniferbyrnes.github.io/resume-react-jkb/
+Deployed here: https://resume-react-jkb.vercel.app/
 
 ## Description:
 
