@@ -52,12 +52,12 @@ function Resume() {
         <div className="col-md">
           <h2>Back-end Proficiencies</h2>
           <ul>
-            <li>HTML</li>
             <li>APIs</li>
             <li>Node</li>
             <li>Express</li>
             <li>SQL, MySQL, Sequelize</li>
             <li>MongoDB, Mongoose</li>
+            <li>GraphQL</li>
             <li>REST</li>
             <li>C, Unix, PL1, COBOL, Ingres</li>
           </ul>
