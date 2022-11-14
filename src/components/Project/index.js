@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardLink, CardText } from 'reactstrap';
+import { CardImg, CardHeader, CardBody } from 'reactstrap';
 
 const Project = ({ projectKey }) => {
 
@@ -49,18 +50,21 @@ const Project = ({ projectKey }) => {
   ]);
 
   return (
-    <div>
-        <CardText tag="h3" style={{ color: "var(--primary)" }} >{photos[projectKey].name}</CardText>
+    <CardBody>
+      <CardLink href={photos[projectKey].deployedLink} target="_blank" rel="noreferrer noopener">
+        <CardImg
+          src={require(`../../assets/projects/${projectKey}.png`)}
+          alt={photos[projectKey].name}
 
-        <CardText>
-          <CardLink href={photos[projectKey].deployedLink}>
-            Deployed App
-          </CardLink>
-          <CardLink href={photos[projectKey].githubLink}>
-            GitHub
-          </CardLink>
-        </CardText>
-    </div>
+          width="100%"
+          height="90%"
+        />
+      </CardLink>
+      <CardHeader>
+        <CardText tag="h3" style={{ color: "var(--primary)" }} >{photos[projectKey].name}</CardText>
+      </CardHeader>
+      
+    </CardBody>
   )
 }
 

@@ -9,6 +9,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
+    "react-parallax-tilt": "^1.7.68",
     "react-router-dom": "^6.4.1",
     "react-scripts": "^2.1.3",
     "reactstrap": "^9.1.4",

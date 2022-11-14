@@ -16,11 +16,12 @@ function Resume() {
       </div>
       <div>
 
+        <br/>
         <a href="#resumePDF" onClick={toggle}
         >Download PDF resumé with this link</a>
 
         <Modal isOpen={modal} toggle={toggle} fullscreen>
-          <ModalHeader toggle={toggle}>Modal title</ModalHeader>
+          <ModalHeader toggle={toggle}>Resume for Jennifer Byrnes</ModalHeader>
           <ModalBody>
             <object width="100%" height="800" data={byrnesResume} type="application/pdf">Download PDF resumé with this link
             </object>
