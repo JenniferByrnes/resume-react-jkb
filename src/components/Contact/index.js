@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { validateEmail } from '../../utils/helpers';
-import { Container, Card, Form, FormGroup, Input, Button, Row } from 'reactstrap';
+import { Container, Card, Form, Input, Button, Row } from 'reactstrap';
 import emailjs from 'emailjs-com';
 import Swal from 'sweetalert2';
+
+// import { faHome } from "@fortawesome/free-regular-svg-icons";
+import { faUser, faEnvelope, faMessage } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SERVICE_ID = "service_ahz5iig";
 const TEMPLATE_ID = "template_zb9eoya";
@@ -62,42 +66,65 @@ function ContactForm() {
     <Container>
       <h1 className="my-2">Contact me</h1>
       <Row className="flex-wrap justify-center">
-      <Card style={{ width: '18rem' }} className="justify-center p-2">
-        <Form id="contact-form" onSubmit={handleSubmit}>
 
-          <FormGroup>
-            <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
-              icon="user circle"
-              iconPosition="left"
-              placeholder="Name"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
-              icon="mail"
-              iconPosition="left"
-              placeholder="Email"
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              id="messageText"
-              type="textarea"
-              name='user_message'
-              defaultValue={message}
-              onBlur={handleChange}
-              rows="5"
-              placeholder="Message"
-            />
-          </FormGroup>
-          {errorMessage && (
-            <div>
-              <p className="error-text">{errorMessage}</p>
+        {/* <Card>
+          <CardText tag="h3"  className="m-4" style={{ color: "var(--primary)" }} >Let's work on web solutions together!  Drop me a line!</CardText>
+        </Card> */}
+        <Card style={{ maxWidth: '30rem' }} className="p-2 m-4">
+          <Form id="contact-form" onSubmit={handleSubmit}>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" style={{ backgroundColor: "var(--secondary)" }}>
+                  <h3><FontAwesomeIcon icon={faUser} style={{ color: "var(--primary)" }} /></h3>
+                </span>
+              </div>
+              <Input type="text" defaultValue={name} onBlur={handleChange} name='user_name'
+                icon="user circle"
+                iconPosition="left"
+                placeholder="Name"
+                style={{ color: "var(--primary)" }}
+              />
             </div>
-          )}
-          <Button type="submit">Submit</Button>
-        </Form>
-      </Card>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" style={{ backgroundColor: "var(--secondary)" }}>
+                  <h3><FontAwesomeIcon icon={faEnvelope} style={{ color: "var(--primary)" }} /></h3>
+                </span>
+              </div>
+              <Input type='email' defaultValue={email} onBlur={handleChange} name='user_email'
+                icon="mail"
+                iconPosition="left"
+                placeholder="Email"
+                style={{ color: "var(--primary)" }}
+              />
+            </div>
+            <div className="input-group mb-3">
+              <div className="input-group-prepend">
+                <span className="input-group-text" style={{ backgroundColor: "var(--secondary)" }}>
+                  <h3><FontAwesomeIcon icon={faMessage} style={{ color: "var(--primary)" }} /></h3>
+                </span>
+              </div>
+              <Input
+                id="messageText"
+                type="textarea"
+                name='user_message'
+                defaultValue={message}
+                onBlur={handleChange}
+                rows="5"
+                placeholder="Message"
+                style={{ color: "var(--primary)" }}
+              />
+            </div>
+            {errorMessage && (
+              <div>
+                <p className="error-text" style={{ color: "var(--primary)" }}>{errorMessage}</p>
+              </div>
+            )}
+            <div className="flex-wrap justify-center row">
+              <Button type="submit" style={{ color: "var(--light)", backgroundColor: "var(--primary)", maxWidth: '9rem' }} >Submit</Button>
+            </div>
+          </Form>
+        </Card>
       </Row>
     </Container>
   );
