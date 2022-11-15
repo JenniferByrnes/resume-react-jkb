@@ -55,7 +55,6 @@ const Project = ({ projectKey }) => {
         <CardImg
           src={require(`../../assets/projects/${projectKey}.png`)}
           alt={photos[projectKey].name}
-
           width="100%"
           height="90%"
         />
