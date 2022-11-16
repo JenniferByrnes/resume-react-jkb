@@ -6,42 +6,55 @@ import ImageAPI from "../../assets/skills/icons8-api-50.png";
 import ImageApollo from "../../assets/skills/icons8-apollo-50.png";
 import ImageAtlassian from "../../assets/skills/icons8-atlassian-confluence-50.png";
 import ImageBootstrap from "../../assets/skills/icons8-bootstrap-50.png";
-
-import Imagecss3 from "../../assets/skills/icons8-css3-50.png";
-import Imageexpress from "../../assets/skills/icons8-express-js-50.png";
-import Imagegithub from "../../assets/skills/icons8-github-50.png";
-import Imagegraphql from "../../assets/skills/icons8-graphql-50.png";
-import Imagehtml from "../../assets/skills/icons8-html-5-50.png";
-import Imagejavascript from "../../assets/skills/icons8-javascript-50.png";
+import ImageCss3 from "../../assets/skills/icons8-css3-50.png";
+import ImageExpress from "../../assets/skills/icons8-express-js-50.png";
+import ImageGithub from "../../assets/skills/icons8-github-50.png";
+import ImageGraphql from "../../assets/skills/icons8-graphql-50.png";
+import ImageHtml from "../../assets/skills/icons8-html-5-50.png";
+import ImageJavascript from "../../assets/skills/icons8-javascript-50.png";
 import ImageJsonWebToken from "../../assets/skills/icons8-json-web-token-50.png";
-import Imagematerial from "../../assets/skills/icons8-material-ui-50.png";
-import Imagemongodb from "../../assets/skills/icons8-mongodb-50.png";
-import Imagemongoose from "../../assets/skills/icons8-mongoose-50.png";
-import Imagemysql from "../../assets/skills/icons8-mysql-logo-50.png";
-import Imagenodejs from "../../assets/skills/icons8-nodejs-50.png";
-import Imagenpm from "../../assets/skills/icons8-npm-50.png";
-import Imageredux from "../../assets/skills/icons8-redux-50.png";
+import ImageMaterial from "../../assets/skills/icons8-material-ui-50.png";
+import ImageMongodb from "../../assets/skills/icons8-mongodb-50.png";
+import ImageMongoose from "../../assets/skills/icons8-mongoose-50.png";
+import ImageMysql from "../../assets/skills/icons8-mysql-logo-50.png";
+import ImageNodejs from "../../assets/skills/icons8-nodejs-50.png";
+import ImageNpm from "../../assets/skills/icons8-npm-50.png";
+import ImageRedux from "../../assets/skills/icons8-redux-50.png";
 import ImageTailwindcss from "../../assets/skills/icons8-tailwindcss-50.png";
-import Imagevisual from "../../assets/skills/icons8-visual-studio-code-insides-50.png";
-import Imagewebpack from "../../assets/skills/icons8-webpack-50.png";
+import ImageVisual from "../../assets/skills/icons8-visual-studio-code-insides-50.png";
+import ImageWebpack from "../../assets/skills/icons8-webpack-50.png";
 
 function Resume() {
   const [modal, setModal] = useState(false);
-
   const toggle = () => setModal(!modal);
 
   return (
     <Container>
       <h1 id="resume">My Resumé</h1>
       <div>
-        <a href="https://docs.google.com/document/d/1xlJVHfr4bVYev0StOZ8vOCXq7LtwUyQ-2tv2KReKpdY/edit?usp=sharing" target="_blank" rel="noopener noreferrer">View resumé online with this link</a>
+        <div className="flex-wrap justify-center row">
+          <Button className='m-2'
+            style={{ color: "var(--light)", backgroundColor: "var(--primary)", maxWidth: '18rem' }}
+            href="https://docs.google.com/document/d/1xlJVHfr4bVYev0StOZ8vOCXq7LtwUyQ-2tv2KReKpdY/edit?usp=sharing"
+            tag="a"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="lg"
+          >View resumé online
+          </Button>
+
+          <Button className='m-2'
+            style={{ color: "var(--light)", backgroundColor: "var(--primary)", maxWidth: '18rem' }}
+            href="#resumePDF"
+            tag="a"
+            size="lg"
+            onClick={toggle}
+          >Prepare for printing
+          </Button>
+        </div>
       </div>
       <div>
-
         <br />
-        <a href="#resumePDF" onClick={toggle}
-        >Download PDF resumé with this link</a>
-
         <Modal isOpen={modal} toggle={toggle} fullscreen>
           <ModalHeader toggle={toggle}>Resume for Jennifer Byrnes</ModalHeader>
           <ModalBody>
@@ -88,27 +101,27 @@ function Resume() {
       </div>
       <Row>
         <p>
-          <img src={ImageAPI} />
-          <img src={ImageApollo} />
-          <img src={ImageAtlassian} />
-          <img src={ImageBootstrap} />
-          <img src={Imagecss3} />
-          <img src={Imageexpress} />
-          <img src={Imagegithub} />
-          <img src={Imagegraphql} />
-          <img src={Imagehtml} />
-          <img src={Imagejavascript} />
-          <img src={ImageJsonWebToken} />
-          <img src={Imagematerial} />
-          <img src={Imagemongodb} />
-          <img src={Imagemongoose} />
-          <img src={Imagemysql} />
-          <img src={Imagenodejs} />
-          <img src={Imagenpm} />
-          <img src={Imageredux} />
-          <img src={ImageTailwindcss} />
-          <img src={Imagevisual} />
-          <img src={Imagewebpack} />
+          <img src={ImageAPI} alt="skill icon" />
+          <img src={ImageApollo} alt="skill icon" />
+          <img src={ImageAtlassian} alt="skill icon" />
+          <img src={ImageBootstrap} alt="skill icon" />
+          <img src={ImageCss3} alt="skill icon" />
+          <img src={ImageExpress} alt="skill icon" />
+          <img src={ImageGithub} alt="skill icon" />
+          <img src={ImageGraphql} alt="skill icon" />
+          <img src={ImageHtml} alt="skill icon" />
+          <img src={ImageJavascript} alt="skill icon" />
+          <img src={ImageJsonWebToken} alt="skill icon" />
+          <img src={ImageMaterial} alt="skill icon" />
+          <img src={ImageMongodb} alt="skill icon" />
+          <img src={ImageMongoose} alt="skill icon" />
+          <img src={ImageMysql} alt="skill icon" />
+          <img src={ImageNodejs} alt="skill icon" />
+          <img src={ImageNpm} alt="skill icon" />
+          <img src={ImageRedux} alt="skill icon" />
+          <img src={ImageTailwindcss} alt="skill icon" />
+          <img src={ImageVisual} alt="skill icon" />
+          <img src={ImageWebpack} alt="skill icon" />
         </p>
       </Row>
     </Container >
