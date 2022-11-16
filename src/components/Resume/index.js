@@ -1,7 +1,29 @@
 import React, { useState } from 'react';
-import { Container } from 'reactstrap';
+import { Container, Row } from 'reactstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import byrnesResume from "../../assets/cover/Byrnesresume.pdf";
+import ImageAPI from "../../assets/skills/icons8-api-50.png";
+import ImageApollo from "../../assets/skills/icons8-apollo-50.png";
+import ImageAtlassian from "../../assets/skills/icons8-atlassian-confluence-50.png";
+import ImageBootstrap from "../../assets/skills/icons8-bootstrap-50.png";
+
+import Imagecss3 from "../../assets/skills/icons8-css3-50.png";
+import Imageexpress from "../../assets/skills/icons8-express-js-50.png";
+import Imagegithub from "../../assets/skills/icons8-github-50.png";
+import Imagegraphql from "../../assets/skills/icons8-graphql-50.png";
+import Imagehtml from "../../assets/skills/icons8-html-5-50.png";
+import Imagejavascript from "../../assets/skills/icons8-javascript-50.png";
+import ImageJsonWebToken from "../../assets/skills/icons8-json-web-token-50.png";
+import Imagematerial from "../../assets/skills/icons8-material-ui-50.png";
+import Imagemongodb from "../../assets/skills/icons8-mongodb-50.png";
+import Imagemongoose from "../../assets/skills/icons8-mongoose-50.png";
+import Imagemysql from "../../assets/skills/icons8-mysql-logo-50.png";
+import Imagenodejs from "../../assets/skills/icons8-nodejs-50.png";
+import Imagenpm from "../../assets/skills/icons8-npm-50.png";
+import Imageredux from "../../assets/skills/icons8-redux-50.png";
+import ImageTailwindcss from "../../assets/skills/icons8-tailwindcss-50.png";
+import Imagevisual from "../../assets/skills/icons8-visual-studio-code-insides-50.png";
+import Imagewebpack from "../../assets/skills/icons8-webpack-50.png";
 
 function Resume() {
   const [modal, setModal] = useState(false);
@@ -16,7 +38,7 @@ function Resume() {
       </div>
       <div>
 
-        <br/>
+        <br />
         <a href="#resumePDF" onClick={toggle}
         >Download PDF resumé with this link</a>
 
@@ -64,6 +86,31 @@ function Resume() {
           </ul>
         </div>
       </div>
+      <Row>
+        <p>
+          <img src={ImageAPI} />
+          <img src={ImageApollo} />
+          <img src={ImageAtlassian} />
+          <img src={ImageBootstrap} />
+          <img src={Imagecss3} />
+          <img src={Imageexpress} />
+          <img src={Imagegithub} />
+          <img src={Imagegraphql} />
+          <img src={Imagehtml} />
+          <img src={Imagejavascript} />
+          <img src={ImageJsonWebToken} />
+          <img src={Imagematerial} />
+          <img src={Imagemongodb} />
+          <img src={Imagemongoose} />
+          <img src={Imagemysql} />
+          <img src={Imagenodejs} />
+          <img src={Imagenpm} />
+          <img src={Imageredux} />
+          <img src={ImageTailwindcss} />
+          <img src={Imagevisual} />
+          <img src={Imagewebpack} />
+        </p>
+      </Row>
     </Container >
   )
 }
