@@ -67,9 +67,6 @@ function ContactForm() {
       <h1 className="my-2">Contact me</h1>
       <Row className="flex-wrap justify-center">
 
-        {/* <Card>
-          <CardText tag="h3"  className="m-4" style={{ color: "var(--primary)" }} >Let's work on web solutions together!  Drop me a line!</CardText>
-        </Card> */}
         <Card style={{ maxWidth: '30rem' }} className="p-2 m-4">
           <Form id="contact-form" onSubmit={handleSubmit}>
             <div className="input-group mb-3">

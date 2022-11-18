@@ -8,12 +8,12 @@ html {
   display: flex;
   flex-direction: column;
   background:
-  radial-gradient(#303258 15%, transparent 15%) 0 0,
-  radial-gradient(#2a2c4d 15%, transparent 15%) 16px 16px,
-  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 16px 17px;
+  radial-gradient(#e0e0e2 15%, transparent 15%) 0 0,
+  radial-gradient(#e2e5e6 15%, transparent 15%) 16px 16px,
+  radial-gradient(rgba(255, 255, 255, 0.836) 15%, transparent 20%) 0 1px,
+  radial-gradient(#eeeef5c7 15%, transparent 20%) 16px 17px;
   background-size: 32px 32px;
-  background-color: #363863;
+  background-color: #e9e9eb;
   justify-content: space-around;
 }
 
@@ -23,11 +23,11 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary: #457B9D;
-  --secondary: #A8DADC;
-  --tertiary: #E63946;
-  --light: #FFFFFF;
-  --dark: #1D3557;
+  --primary: #3c6e71;
+  --secondary: #284b63;
+  --tertiary: #D9D9D9;
+  --light: #ffffff;
+  --dark: #353535;
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
   --spacing-five: calc(2.5rem);
@@ -58,9 +58,18 @@ h6 {
   margin: 5px 0;
   line-height: 1.25;
 }
+h1 {
+  font-family: cursive;
+  font-weight: 600;
+  line-height: 6rem;
+  font-size: 50px;
+  letter-spacing: .1em;
+  color: var(--secondary);
+}
 
 h2 {
-  color: var(--light);
+  color: var(--primary);
+  font-weight: bold;
 }
 
 a {
@@ -72,14 +81,14 @@ a:hover {
   color: var(--secondary);
 }
 
-#name-logo {
+/* #name-logo {
   font-weight: 600;
   line-height: 6rem;
   font-size: 50px;
   letter-spacing: .1em;
   color: var(--primary);
   font-family: cursive;
-}
+} */
 
 header {
   background: transparent;

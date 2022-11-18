@@ -50,7 +50,7 @@ const Project = ({ projectKey }) => {
   ]);
 
   return (
-    <CardBody>
+    <CardBody style={{ backgroundColor: "var(--tertiary)" }} >
       <CardLink href={photos[projectKey].deployedLink} target="_blank" rel="noreferrer noopener">
         <CardImg
           src={require(`../../assets/projects/${projectKey}.png`)}

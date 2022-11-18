@@ -30,7 +30,7 @@ function Resume() {
 
   return (
     <Container>
-      <h1 id="resume">My Resumé</h1>
+      <h1>My Resumé</h1>
       <div>
         <div className="flex-wrap justify-center row">
           <Button className='m-2'
@@ -68,9 +68,9 @@ function Resume() {
           </ModalFooter>
         </Modal>
       </div>
-      <div className="my-2 text-center">
-        <h1 className='mt-4'>Skill Set</h1>
-      </div>
+
+      <h1 className='mt-4 my-2'>Skill Set</h1>
+
       <div className="row">
         <div className="col-md">
           <h2>Front-end Proficiencies</h2>
