@@ -20,12 +20,10 @@ function About() {
             <div>
               <p></p>
               <h4>Full Stack Web Developer with a focus on front-end development and experience in application development,
-                teaching, and military leadership. Expected certificate from the University of Richmond's Full Stack Web
-                Development Bootcamp in November 2022. 
+                teaching, and military leadership. Earned certificate from the University of Richmond's Full Stack Web Development Bootcamp in November 2022. 
                 </h4>
                 <h4>
-                Skillset has been recently updated with HTML, CSS, Javascript,
-                React.js, and responsive web design to build applications from scaffolding to rollout.</h4>
+                Skillset has been recently updated with the full MERN stack with responsive web design to build applications from scaffolding to rollout.</h4>
             </div>
           </div>
         </Col>

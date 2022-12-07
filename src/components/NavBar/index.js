@@ -18,10 +18,10 @@ export default function NavBar({ currentPage, handlePageChange }) {
   return (
     <Container>
       <Navbar expand="md" >
-        <NavbarBrand >
+        <NavbarBrand>
           <img src={JennLogo} className="img-fluid my-2" style={{ minWidth: "200px", height: "200px" }} alt="Jennifer Byrnes logo" />
-          <NavbarToggler onClick={toggle} />
         </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
         <Collapse className="nav-tabs border-bottom-0 my-1 flex-row flex-end"
           isOpen={isOpen} navbar>
           <Nav end navbar>

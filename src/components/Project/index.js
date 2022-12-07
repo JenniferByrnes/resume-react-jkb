@@ -8,8 +8,8 @@ const Project = ({ projectKey }) => {
     {
       key: 0,
       name: 'Project Choice',
-      description: 'This programs allows a user to find the abortion laws for a given US state and provides an online retail store from which to purchase branded merchandise.  I led a five person team to build this class project.',
-      deployedLink: 'https://project-choice.herokuapp.com/',
+      description: 'This programs allows a user to find the abortion laws for a given US state and provides an online retail store from which to purchase branded merchandise.  I led a five person team to build this class project and then followed it up with one other programmer to enhance it.',
+      deployedLink: 'https://project-choice.onrender.com/',
       githubLink: 'https://github.com/JenniferByrnes/project-choice'
     },
     {
