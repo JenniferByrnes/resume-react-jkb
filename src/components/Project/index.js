@@ -37,7 +37,7 @@ const Project = ({ projectKey }) => {
       key: 4,
       name: 'Weather Playlist',
       description: 'This 3 person team project allows the user to key in their city for the daily weather, related GIF, and a Spotify playlist recommendation',
-      deployedLink: 'https://rata-whats-cooking.herokuapp.com/',
+      deployedLink: 'https://jenniferbyrnes.github.io/weather-playlist/',
       githubLink: 'https://github.com/JenniferByrnes/weather-playlist'
     },
     {
