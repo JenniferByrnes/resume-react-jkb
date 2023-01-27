@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row } from 'reactstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import byrnesResume from "../../assets/cover/Byrnesresume.pdf";
+import byrnesResumeOnline from "../../assets/cover/ByrnesResumeOnline.pdf";
 import ImageAPI from "../../assets/skills/icons8-api-50.png";
 import ImageApollo from "../../assets/skills/icons8-apollo-50.png";
 import ImageAtlassian from "../../assets/skills/icons8-atlassian-confluence-50.png";
@@ -58,7 +58,7 @@ function Resume() {
         <Modal isOpen={modal} toggle={toggle} fullscreen>
           <ModalHeader toggle={toggle}>Resume for Jennifer Byrnes</ModalHeader>
           <ModalBody>
-            <object width="100%" height="800" data={byrnesResume} type="application/pdf">Download PDF resumé with this link
+            <object width="100%" height="800" data={byrnesResumeOnline} type="application/pdf">Download PDF resumé with this link
             </object>
           </ModalBody>
           <ModalFooter>
