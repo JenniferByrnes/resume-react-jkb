@@ -13,14 +13,14 @@ const Project = ({ projectKey }) => {
       githubLink: 'https://github.com/JenniferByrnes/project-choice'
     },
     {
-      key: 1,
+      key: 5,
       name: 'Workday Scheduler',
       description: 'The user can type in appointments for day and it keeps track of the time using colors on the planner.',
       deployedLink: 'https://jenniferbyrnes.github.io/work-day-scheduler',
       githubLink: 'https://github.com/JenniferByrnes/work-day-scheduler'
     },
     {
-      key: 2,
+      key: 4,
       name: 'Wix Mask Making',
       description: 'A WIX site to allow customers to view fabric and mask options. This site is live and available for customers - though demand has dropped.',
       deployedLink: 'https://jenniferbyrnes.wixsite.com/mysite',
@@ -34,14 +34,14 @@ const Project = ({ projectKey }) => {
       githubLink: 'https://github.com/JenniferByrnes/code-quiz'
     },
     {
-      key: 4,
+      key: 2,
       name: 'Weather Playlist',
       description: 'This 3 person team project allows the user to key in their city for the daily weather, related GIF, and a Spotify playlist recommendation',
       deployedLink: 'https://jenniferbyrnes.github.io/weather-playlist/',
       githubLink: 'https://github.com/JenniferByrnes/weather-playlist'
     },
     {
-      key: 5,
+      key: 1,
       name: 'Whats Cooking',
       description: 'This project was creatd by me as the leader of a 6 person team, and it provides the user with an online, family cookbook. The user begins with a nice selection of recipes searchable by ingredient. The user can add and update their own recipes, including images, and add notes to existing recipes.',
       deployedLink: 'https://rata-whats-cooking.herokuapp.com/',
