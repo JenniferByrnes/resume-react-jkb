@@ -11,20 +11,20 @@ const Project = ({ projectKey }) => {
       description: 'This programs allows a user to find the abortion laws for a given US state and provides an online retail store from which to purchase branded merchandise.  I led a five person team to build this class project and then followed it up with one other programmer to enhance it.',
       deployedLink: 'https://project-choice.onrender.com/',
       githubLink: 'https://github.com/JenniferByrnes/project-choice'
-    },
+    },    
     {
       key: 1,
-      name: 'Workday Scheduler',
-      description: 'The user can type in appointments for day and it keeps track of the time using colors on the planner.',
-      deployedLink: 'https://jenniferbyrnes.github.io/work-day-scheduler',
-      githubLink: 'https://github.com/JenniferByrnes/work-day-scheduler'
+      name: 'Whats Cooking',
+      description: 'This project was creatd by me as the leader of a 6 person team, and it provides the user with an online, family cookbook. The user begins with a nice selection of recipes searchable by ingredient. The user can add and update their own recipes, including images, and add notes to existing recipes.',
+      deployedLink: 'https://rata-whats-cooking.herokuapp.com/',
+      githubLink: 'https://github.com/JenniferByrnes/whats-cooking'
     },
     {
       key: 2,
-      name: 'Wix Mask Making',
-      description: 'A WIX site to allow customers to view fabric and mask options. This site is live and available for customers - though demand has dropped.',
-      deployedLink: 'https://jenniferbyrnes.wixsite.com/mysite',
-      githubLink: 'https://github.com/JenniferByrnes'
+      name: 'Weather Playlist',
+      description: 'This 3 person team project allows the user to key in their city for the daily weather, related GIF, and a Spotify playlist recommendation',
+      deployedLink: 'https://jenniferbyrnes.github.io/weather-playlist/',
+      githubLink: 'https://github.com/JenniferByrnes/weather-playlist'
     },
     {
       key: 3,
@@ -35,17 +35,17 @@ const Project = ({ projectKey }) => {
     },
     {
       key: 4,
-      name: 'Weather Playlist',
-      description: 'This 3 person team project allows the user to key in their city for the daily weather, related GIF, and a Spotify playlist recommendation',
-      deployedLink: 'https://jenniferbyrnes.github.io/weather-playlist/',
-      githubLink: 'https://github.com/JenniferByrnes/weather-playlist'
+      name: 'Workday Scheduler',
+      description: 'The user can type in appointments for day and it keeps track of the time using colors on the planner.',
+      deployedLink: 'https://jenniferbyrnes.github.io/work-day-scheduler',
+      githubLink: 'https://github.com/JenniferByrnes/work-day-scheduler'
     },
     {
       key: 5,
-      name: 'Whats Cooking',
-      description: 'This project was creatd by me as the leader of a 6 person team, and it provides the user with an online, family cookbook. The user begins with a nice selection of recipes searchable by ingredient. The user can add and update their own recipes, including images, and add notes to existing recipes.',
-      deployedLink: 'https://rata-whats-cooking.herokuapp.com/',
-      githubLink: 'https://github.com/JenniferByrnes/whats-cooking'
+      name: 'Wix Mask Making',
+      description: 'A WIX site to allow customers to view fabric and mask options. This site is live and available for customers - though demand has dropped.',
+      deployedLink: 'https://jenniferbyrnes.wixsite.com/mysite',
+      githubLink: 'https://github.com/JenniferByrnes'
     },
   ]);
 
